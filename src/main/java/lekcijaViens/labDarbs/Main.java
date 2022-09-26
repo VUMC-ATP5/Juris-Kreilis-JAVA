@@ -8,7 +8,7 @@ public class Main {
         int cikAraIrGradi = 10;
 
         int vecums = 66;
-
+        String test = "ADSASDASDASDA";
         int temperatura = -10;
         System.out.println("Ziemā būs: " + temperatura);
         System.out.println("Mans vecums ir: " + vecums);
@@ -33,9 +33,12 @@ public class Main {
 
         long zivisOkeana = 21474836499L;
 
-
+        String valstsNosaukums = "Latvija";
         System.out.println("Svars: " + svars);
-        System.out.println("VECUMS:" + vecums + "\nGARUMS: " + garums + "\nKurpju izmers:" + kurpjuIzmers);
+        System.out.println(valstsNosaukums + " dzīvo " + iedzivotajuSkaits + " iedzievotaji. \n" +
+                "Valsts platība ir" + platiba + " kvadratkilometri.");
+
+
 
         //
         String sunaVards = "Reksis";
@@ -115,6 +118,8 @@ public class Main {
 
         rezultats = 5*(3+7)/4;
         System.out.println(rezultats);
+
+
     }
 
 }
