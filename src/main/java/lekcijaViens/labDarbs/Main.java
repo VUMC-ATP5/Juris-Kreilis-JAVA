@@ -35,9 +35,9 @@ public class Main {
 
         String valstsNosaukums = "Latvija";
         System.out.println("Svars: " + svars);
-        System.out.println(valstsNosaukums + " dzīvo " + iedzivotajuSkaits + " iedzievotaji. \n" +
-                "Valsts platība ir" + platiba + " kvadratkilometri.");
-
+//        System.out.println(valstsNosaukums + " dzīvo " + iedzivotajuSkaits + " iedzievotaji. \n" +
+//                "Valsts platība ir" + platiba + " kvadratkilometri.");
+//
 
 
         //
@@ -118,6 +118,7 @@ public class Main {
 
         rezultats = 5*(3+7)/4;
         System.out.println(rezultats);
+
 
 
     }
