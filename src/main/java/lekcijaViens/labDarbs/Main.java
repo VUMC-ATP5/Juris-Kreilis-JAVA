@@ -1,5 +1,8 @@
 package lekcijaViens.labDarbs;
 
+
+import lekcijaCetri.labDarbs.Automasina;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -84,7 +87,7 @@ public class Main {
         int b = 10;
         int summa;
         summa = a + b;
-
+        Automasina auto = new Automasina();
 
         System.out.println(summa);
 
@@ -118,7 +121,6 @@ public class Main {
 
         rezultats = 5*(3+7)/4;
         System.out.println(rezultats);
-
 
 
     }

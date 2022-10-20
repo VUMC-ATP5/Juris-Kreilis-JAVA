@@ -3,13 +3,16 @@ package lekcijaDiv.labDarbs;
 
 import java.util.Scanner;
 
-public class LaboratorijasDarbsDivi {
+public class LaboratorijasDarbsDiviParsaukts {
 
     public static void main(String[] args) {
         //Salidzināšanas izteiksmes
         //Lielāks
         int x = 3;
         int y = 2;
+        int speed = 20;
+
+
         //šeit būs true
         System.out.println(x > y);
         y = 3;

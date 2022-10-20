@@ -8,8 +8,6 @@ public class debug {
         System.out.println("Kā Tevi sauc?");
         String name = scanner.nextLine();
         System.out.println("Sveiki " + name +"!");
-
-
     }
 
 }
