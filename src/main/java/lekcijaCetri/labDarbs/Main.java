@@ -73,6 +73,7 @@ public class Main {
 
         System.out.println(rinkisDivi.rekinatLaukumu());
         System.out.println(rinkisDivi.rekinatLinijasGarumu());
+        //rinkisDivi.PI = 24.3;
 
     }
 }

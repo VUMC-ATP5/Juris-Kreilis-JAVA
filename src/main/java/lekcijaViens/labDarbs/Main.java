@@ -2,10 +2,14 @@ package lekcijaViens.labDarbs;
 
 
 import lekcijaCetri.labDarbs.Automasina;
+import lekcijaPieci.staticPiemers.Utilities;
 
 public class Main {
 
     public static void main(String[] args) {
+
+        Utilities.printDate();
+
         //int - integer , satur veselu skaitli
 
         int cikAraIrGradi = 10;
