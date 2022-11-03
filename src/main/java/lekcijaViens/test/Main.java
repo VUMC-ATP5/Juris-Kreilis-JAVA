@@ -1,6 +1,11 @@
 package lekcijaViens.test;
 
+
+
 public class Main {
+
+
+
     public static void main(String[] args) {
         int[] skaitluMasivs;
         skaitluMasivs = new int[100];
@@ -9,6 +14,7 @@ public class Main {
             System.out.println("Pāra skaitļi masīvā 100 ir" + (skaitli));
             skaitluMasivs[skaitli] = skailti * 2;
             skailti++;
+
         }
 
 

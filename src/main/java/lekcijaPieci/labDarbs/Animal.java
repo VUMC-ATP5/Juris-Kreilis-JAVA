@@ -4,6 +4,8 @@ public class Animal {
     int age;
     boolean canClimbTrees;
 
+
+
     public void breathe(){
         System.out.println("I can breathe");
     }

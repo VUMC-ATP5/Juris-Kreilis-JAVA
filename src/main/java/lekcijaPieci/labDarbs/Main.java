@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Cat muris = new Cat();
         Dog reksis = new Dog();
-        Cow govs = new Cow();
+
         muris.age = 3;
         muris.canClimbTrees = true;
 
@@ -14,11 +14,10 @@ public class Main {
 
         muris.breathe();
         reksis.breathe();
-        govs.breathe();
+
 
         muris.makeSound();
-        reksis.makeSound();
-        govs.makeSound();
+
         muris.eat();
         reksis.eat();
         muris.sharpenClaws();
