@@ -1,52 +1,61 @@
 package lekcijaSeptini.labDarbs;
 
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import lekcijaAstoni.pageObjects.LoginPage;
+import lekcijaAstoni.pageObjects.ProductsPage;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class SauceDemoLoginTest extends BaseTest {
 
 
+    @Test
+    public void testLoginPageObjectExample() {
+        LoginPage loginPage = new LoginPage(parluks);
+        loginPage.login("asdasd", "asdasdasda");
+        Assert.assertEquals(loginPage.getErrorText(), "Epic sadface: Username and password do not match any " +
+                "user in this service");
+    }
 
     @Test
     public void testLoginWrongUsernameAndPassword() {
-        testLogin("asdasdasda","asdasdasdsa",
-                "Epic sadface: Username and password do not match any user in this service");
+        LoginPage loginPage = new LoginPage(parluks);
+        loginPage.login("asdasd", "asdasdasda");
+        Assert.assertEquals(loginPage.getErrorText(), "Epic sadface: Username and password do not match any " +
+                "user in this service");
     }
 
     @Test
     public void testLoginEmptyUsernameAndPassword() {
-        testLogin("","", "Epic sadface: Username is required");
+        LoginPage loginPage = new LoginPage(parluks);
+        loginPage.login("", "");
+        Assert.assertEquals(loginPage.getErrorText(), "Epic sadface: Username is required");
     }
 
     @Test
-    public void testLoginEmptyUsernameAndFilledPassword () {
-        testLogin("", "dfsdfsdfsd", "Epic sadface: Username is required");
+    public void testLoginEmptyUsernameAndFilledPassword() {
+        LoginPage loginPage = new LoginPage(parluks);
+        loginPage.login("", "asdasdasdas");
+        Assert.assertEquals(loginPage.getErrorText(), "Epic sadface: Username is required");
     }
 
     @Test
-    public void testLoginFilledUsernameAndEmptyPassword () {
-        testLogin("testtest", "", "Epic sadface: Password is required");
+    public void testLoginFilledUsernameAndEmptyPassword() {
+        LoginPage loginPage = new LoginPage(parluks);
+        loginPage.login("asdas", "");
+        Assert.assertEquals(loginPage.getErrorText(), "Epic sadface: Password is required");
     }
 
+    @Test
+    public void testSuccessfulLogin() {
+        LoginPage loginPage = new LoginPage(parluks);
+        loginPage.login("standard_user", "secret_sauce");
+        ProductsPage produktuLapa = new ProductsPage(parluks);
 
+        wait.until(ExpectedConditions.visibilityOf(produktuLapa.getPageTitle()));
+        Assert.assertEquals(produktuLapa.getPageTitle().getText(), "PRODUCTS");
 
-    private void testLogin(String username, String password, String expectedErrorMessage){
-        WebElement lietotajVardsIevadesLauks = parluks.findElement(By.id("user-name"));
-        lietotajVardsIevadesLauks.sendKeys(username);
-
-        WebElement passwordField = parluks.findElement(By.id("password"));
-        passwordField.sendKeys(password);
-
-        WebElement loginPoga = parluks.findElement(By.id("login-button"));
-        loginPoga.click();
-
-        WebElement errorTextField = parluks.findElement(By.cssSelector("div.error-message-container h3"));
-
-        String errorText = errorTextField.getText();
-        Assert.assertEquals(errorText, expectedErrorMessage);
     }
 
 }
