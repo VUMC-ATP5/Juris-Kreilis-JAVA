@@ -161,11 +161,12 @@ public class Main {
         String dogname2 = "Reksis";
 
         int[] menesaTerini = {100, 40, 23, 44, 55, 200};
+
         String[] produktuSaraksts = {"Piens", "Maize", "Olas"};
 
-        System.out.println(produktuSaraksts[0]); //piens
-        System.out.println(produktuSaraksts[1]); //maize
-        System.out.println(produktuSaraksts[2]); //olas
+        System.out.println(produktuSaraksts[0]);
+        System.out.println(produktuSaraksts[1]);
+        System.out.println(produktuSaraksts[3]);
         System.out.println(menesaTerini[3]);
 
         produktuSaraksts[2] = "Desa";
