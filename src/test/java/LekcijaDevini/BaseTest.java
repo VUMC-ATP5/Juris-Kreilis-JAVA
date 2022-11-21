@@ -16,8 +16,8 @@ public class BaseTest {
     public void setupBrowser() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         driver.navigate().to("https://www.barbora.lv/");
     }
 

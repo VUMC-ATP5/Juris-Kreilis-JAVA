@@ -17,6 +17,11 @@ public class MainPage {
     }
 
     private By searchInputField = By.cssSelector("header.b-header input.b-search");
+    private By signInButton = By.id("fti-header-login");
+
+    public void clickSignInButton(){
+        driver.findElement(signInButton).click();
+    }
 
     public void searchProduct(String productName){
         driver.findElement(searchInputField).sendKeys(productName);
